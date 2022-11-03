@@ -1,0 +1,16 @@
+--Page Object Pattern-(POM)
+*Page object model ile her sayfayı bir page class ile ilişkilendiririz.
+*Bu page class'ında da o sayfata ait olan web elementler ve yine o sayfaya ait metodlar yer alır.
+*Böylece bu sayfada herhangi bir elementin locator'unda değişiklik olduğu zaman bunu ortak bir yerden yönetebiliriz.
+*Bu sayfada işlem yapan her testimizde element locator'unu tek tek değiştirmek yerine,tek bir class'ta yapmış olduğumuz değişiklik
+ile maintance çok daha kolay hala gelir.
+*Testlerimizin olduğu sınıf ve elemanlarımızın olduğu sınıf ayrıdır.Değişiklik olduğu zaman tekrar eden elemanlarımız olmadığı için
+yöntemimiz kolaylaşır ve değişikliklere çok kolay adapte olabiliriz.
+
+https://medium.com/sahibinden-technology/selenium-java-page-object-model-page-factory-kullan%C4%B1m%C4%B1-418d66414f17
+
+Page Factory
+*Page factory page bject model uygulamanın yoludur.
+*@FindBy - Page içersinde bulunan her bir web elementi bu anotasyon ile page classımızda belirtilir.
+*initElements - bu metod ile sayfada bulunan web elementleri initialize edilir.Eğer istenen web elementi DOM üzerinde yoksa noSuchElementExcepiton
+fırlatır.
